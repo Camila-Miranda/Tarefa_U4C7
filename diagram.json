@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "author": "Camila Brito Silveira Miranda",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "board-pi-pico-w", "id": "pico", "top": -32.05, "left": -92.45, "attrs": {} },
+      { "type": "wokwi-servo", "id": "servo1", "top": -2, "left": 67.2, "attrs": {} }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "pico:GND.8", "servo1:GND", "black", [ "h0" ] ],
+      [ "servo1:V+", "pico:3V3", "red", [ "h-28.8", "v-28.7" ] ],
+      [ "pico:GP22", "servo1:PWM", "blue", [ "h0" ] ]
+    ],
+    "dependencies": {}
+  }
